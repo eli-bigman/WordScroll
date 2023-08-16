@@ -1,6 +1,6 @@
 # WordScroll
 <div align="center">
-  <img src="image\WordScroll_Robotic.jpeg" alt="WordList Icon" width="50%" >
+  <img src="assets\ic_launcher_foreground.png" alt="WordList Icon" width="50%" >
 </div>
 
 This is a React Native app that fetches a list of words from a word API and displays them in a scrollable list view. The app makes a request to the API to fetch the list of words and renders them in a user-friendly manner.

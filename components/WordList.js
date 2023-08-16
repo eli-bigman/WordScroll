@@ -1,8 +1,8 @@
-import { ActivityIndicator, SafeAreaView, FlatList, Text, View } from 'react-native'
+import { ActivityIndicator, StyleSheet, FlatList, Text, View } from 'react-native'
 import React, { useState, useEffect } from 'react'
 
 
-function WordList() {
+export default function WordList() {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([])
 
@@ -25,15 +25,20 @@ function WordList() {
   }, []);
 
   return (
-    <View style={{ flex: 1, padding: 24 }}>
+    <View >
       {isLoading ? (<ActivityIndicator />) :
         (<FlatList
+          contentContainerStyle={styles.flatList}
           data={data}
           keyExtractor={(item) => item.word}
+          numColumns={3}
           renderItem={({ item }) => (
-            <Text>
-              {item.word}
-            </Text>
+            <View style={styles.textContainer}>
+              <Text style={styles.text}>
+                {item.word}
+              </Text>
+            </View>
+
           )}
         />
 
@@ -42,6 +47,26 @@ function WordList() {
     </View>
   );
 
-};
+}
 
-export default WordList
+const styles = StyleSheet.create({
+  flatList: {
+    backgroundColor: '#00fdfc',
+    justifyContent: 'space-between'
+  },
+  textContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center'
+  },
+  text: {
+    backgroundColor: '#491375',
+    color: 'white',
+    justifyContent: 'center',
+    padding: 20,
+    width: 120,
+    borderRadius: 50,
+    textAlign: "auto"
+  },
+});
+

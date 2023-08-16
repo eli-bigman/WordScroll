@@ -5,7 +5,6 @@ import WordList from './components/WordList';
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <Test /> */}
       <WordList />
     </View>
   );
@@ -15,7 +14,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

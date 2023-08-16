@@ -4,12 +4,12 @@
     "slug": "WordScroll",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/ic_launcher_round.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/ic_launcher_foreground.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#100b29"
     },
     "assetBundlePatterns": [
       "**/*"
