@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View } from 'react-native';
-// import WordList from './components/WordList1';
 import WordList from './components/WordList';
 
 export default function App() {
